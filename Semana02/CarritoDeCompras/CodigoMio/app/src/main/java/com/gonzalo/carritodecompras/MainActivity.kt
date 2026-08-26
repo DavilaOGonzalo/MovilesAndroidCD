@@ -16,6 +16,13 @@ import com.gonzalo.carritodecompras.ui.theme.CarritoDeComprasTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        println("===== PRODUCTOS =====")
+
+        for (i in productos.indices) {
+            println("${i + 1}. ${productos[i].nombre} - S/${productos[i].precio}")
+        }
+
         enableEdgeToEdge()
         setContent {
             CarritoDeComprasTheme {
