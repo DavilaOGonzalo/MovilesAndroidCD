@@ -23,6 +23,13 @@ class MainActivity : ComponentActivity() {
             println("${i + 1}. ${productos[i].nombre} - S/${productos[i].precio}")
         }
 
+        val carrito = Carrito()
+
+        carrito.agregarProducto(productos[0])
+        carrito.agregarProducto(productos[3])
+
+        carrito.mostrarCarrito()
+
         enableEdgeToEdge()
         setContent {
             CarritoDeComprasTheme {
