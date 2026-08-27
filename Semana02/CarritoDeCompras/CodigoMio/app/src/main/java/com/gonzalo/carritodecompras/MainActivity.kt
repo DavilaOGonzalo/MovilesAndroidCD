@@ -28,6 +28,8 @@ class MainActivity : ComponentActivity() {
         carrito.agregarProducto(productos[0])
         carrito.agregarProducto(productos[3])
 
+        carrito.eliminarProducto(0)
+
         carrito.mostrarCarrito()
 
         println("TOTAL: S/${carrito.calcularTotal()}")

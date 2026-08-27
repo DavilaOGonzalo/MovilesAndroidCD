@@ -8,6 +8,12 @@ class Carrito {
         productos.add(producto)
     }
 
+    fun eliminarProducto(posicion: Int) {
+        if (posicion >= 0 && posicion < productos.size) {
+            productos.removeAt(posicion)
+        }
+    }
+
     fun mostrarCarrito() {
         println("===== CARRITO =====")
 
