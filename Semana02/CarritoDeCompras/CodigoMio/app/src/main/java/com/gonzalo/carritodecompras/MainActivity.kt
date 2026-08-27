@@ -30,6 +30,10 @@ class MainActivity : ComponentActivity() {
 
         carrito.mostrarCarrito()
 
+        println("TOTAL: S/${carrito.calcularTotal()}")
+
+
+
         enableEdgeToEdge()
         setContent {
             CarritoDeComprasTheme {

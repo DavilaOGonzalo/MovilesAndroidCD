@@ -15,4 +15,14 @@ class Carrito {
             println("${producto.nombre} - S/${producto.precio}")
         }
     }
+
+    fun calcularTotal(): Double {
+        var total = 0.0
+
+        for (producto in productos) {
+            total += producto.precio
+        }
+
+        return total
+    }
 }
