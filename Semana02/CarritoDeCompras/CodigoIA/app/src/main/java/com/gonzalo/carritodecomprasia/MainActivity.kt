@@ -39,6 +39,20 @@ class MainActivity : ComponentActivity() {
         // Intentamos cambiar el precio a un valor negativo (inválido)
         mouse.setPrecio(-10.0)
         println("Precio final del mouse tras error: S/ ${mouse.getPrecio()}")
+
+        // --- Ejemplo de Herencia ---
+        println("--- Prueba de Herencia ---")
+
+        // Creamos un ProductoDigital, que hereda de Producto
+        val cursoAndroid = ProductoDigital("Curso Kotlin desde Cero", 99.9, "Video MP4")
+        val ebook = ProductoDigital("Guía POO en Kotlin", 25.0, "PDF")
+
+        // Ambos productos pueden usar mostrarInformacion() pero cada uno a su manera
+        cursoAndroid.mostrarInformacion()
+        ebook.mostrarInformacion()
+
+        // Demostramos que ProductoDigital también heredó el encapsulamiento del precio
+        println("Precio del eBook (heredado): S/ ${ebook.getPrecio()}")
         // ------------------------------
 
         setContent {
