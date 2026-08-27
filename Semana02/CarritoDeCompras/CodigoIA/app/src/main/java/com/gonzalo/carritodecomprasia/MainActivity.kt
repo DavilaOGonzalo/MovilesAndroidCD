@@ -53,6 +53,25 @@ class MainActivity : ComponentActivity() {
 
         // Demostramos que ProductoDigital también heredó el encapsulamiento del precio
         println("Precio del eBook (heredado): S/ ${ebook.getPrecio()}")
+
+        // --- Ejemplo de Polimorfismo ---
+        println("--- Prueba de Polimorfismo ---")
+        
+        // Creamos una lista que acepta cualquier tipo de Producto (Físico o Digital)
+        val listaDeProductos: List<Producto> = listOf(
+            laptop,
+            mouse,
+            cursoAndroid,
+            ebook
+        )
+
+        // Recorremos la lista. Note que 'item' es tratado como un 'Producto' genérico.
+        for (item in listaDeProductos) {
+            // Aquí ocurre el polimorfismo: 
+            // Aunque llamamos al mismo método 'mostrarInformacion()', 
+            // cada objeto responde de forma diferente según su tipo real.
+            item.mostrarInformacion()
+        }
         // ------------------------------
 
         setContent {
