@@ -72,6 +72,22 @@ class MainActivity : ComponentActivity() {
             // cada objeto responde de forma diferente según su tipo real.
             item.mostrarInformacion()
         }
+
+        // --- Ejemplo de Carrito de Compras ---
+        println("\n--- Prueba Final: Carrito de Compras ---")
+        val miCarrito = Carrito()
+
+        // Agregamos productos de ambos tipos al carrito
+        miCarrito.agregarProducto(laptop)
+        miCarrito.agregarProducto(cursoAndroid)
+        miCarrito.agregarProducto(mouse)
+
+        // Mostramos el contenido
+        miCarrito.mostrarCarrito()
+
+        // Mostramos el total
+        val total = miCarrito.calcularTotal()
+        println("Total a pagar: S/ $total")
         // ------------------------------
 
         setContent {
