@@ -1,13 +1,14 @@
 package com.gonzalo.carritodecomprasia
 
 /**
- * Clase que representa un producto físico tangible.
- * Hereda de la clase abstracta Producto.
+ * Clase ProductoFisico.
+ * Implementa el método abstracto usando los mecanismos de la superclase.
  */
 class ProductoFisico(nombre: String, precio: Double) : Producto(nombre, precio) {
 
-    // Implementación concreta del método abstracto definido en la superclase.
     override fun mostrarInformacion() {
-        println("Producto Físico: $nombre - Precio: S/ $precio")
+        // Accedemos al precio mediante el método público getPrecio() 
+        // debido a que la propiedad 'precio' en la clase base es privada.
+        println("Producto Físico: $nombre - Precio: S/ ${getPrecio()}")
     }
 }

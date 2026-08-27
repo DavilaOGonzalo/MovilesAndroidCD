@@ -25,6 +25,20 @@ class MainActivity : ComponentActivity() {
         // Llamada a los métodos implementados
         laptop.mostrarInformacion()
         mouse.mostrarInformacion()
+        
+        // --- Ejemplo de Encapsulamiento ---
+        println("--- Prueba de Encapsulamiento ---")
+        
+        // Consultamos el precio usando el getter
+        println("Precio actual del mouse: S/ ${mouse.getPrecio()}")
+        
+        // Intentamos cambiar el precio a un valor válido
+        mouse.setPrecio(45.0)
+        println("Precio modificado del mouse: S/ ${mouse.getPrecio()}")
+        
+        // Intentamos cambiar el precio a un valor negativo (inválido)
+        mouse.setPrecio(-10.0)
+        println("Precio final del mouse tras error: S/ ${mouse.getPrecio()}")
         // ------------------------------
 
         setContent {
