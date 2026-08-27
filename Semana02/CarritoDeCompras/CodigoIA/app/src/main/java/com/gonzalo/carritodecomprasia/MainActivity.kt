@@ -18,77 +18,47 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // --- Ejemplo de Abstracción ---
+        // ==========================================================
+        // EJECUCIÓN FINAL - CARRITO DE COMPRAS POO
+        // ==========================================================
+
+        println("=== INICIO DE LA DEMOSTRACIÓN FINAL ===")
+
+        // 1. Creación de productos (Abstracción y Herencia)
+        println("\n1. Creando productos disponibles...")
         val laptop = ProductoFisico("Laptop Gaming", 2500.0)
         val mouse = ProductoFisico("Mouse Inalámbrico", 50.0)
-
-        // Llamada a los métodos implementados
-        laptop.mostrarInformacion()
-        mouse.mostrarInformacion()
-        
-        // --- Ejemplo de Encapsulamiento ---
-        println("--- Prueba de Encapsulamiento ---")
-        
-        // Consultamos el precio usando el getter
-        println("Precio actual del mouse: S/ ${mouse.getPrecio()}")
-        
-        // Intentamos cambiar el precio a un valor válido
-        mouse.setPrecio(45.0)
-        println("Precio modificado del mouse: S/ ${mouse.getPrecio()}")
-        
-        // Intentamos cambiar el precio a un valor negativo (inválido)
-        mouse.setPrecio(-10.0)
-        println("Precio final del mouse tras error: S/ ${mouse.getPrecio()}")
-
-        // --- Ejemplo de Herencia ---
-        println("--- Prueba de Herencia ---")
-
-        // Creamos un ProductoDigital, que hereda de Producto
         val cursoAndroid = ProductoDigital("Curso Kotlin desde Cero", 99.9, "Video MP4")
         val ebook = ProductoDigital("Guía POO en Kotlin", 25.0, "PDF")
 
-        // Ambos productos pueden usar mostrarInformacion() pero cada uno a su manera
-        cursoAndroid.mostrarInformacion()
-        ebook.mostrarInformacion()
-
-        // Demostramos que ProductoDigital también heredó el encapsulamiento del precio
-        println("Precio del eBook (heredado): S/ ${ebook.getPrecio()}")
-
-        // --- Ejemplo de Polimorfismo ---
-        println("--- Prueba de Polimorfismo ---")
-        
-        // Creamos una lista que acepta cualquier tipo de Producto (Físico o Digital)
-        val listaDeProductos: List<Producto> = listOf(
-            laptop,
-            mouse,
-            cursoAndroid,
-            ebook
-        )
-
-        // Recorremos la lista. Note que 'item' es tratado como un 'Producto' genérico.
-        for (item in listaDeProductos) {
-            // Aquí ocurre el polimorfismo: 
-            // Aunque llamamos al mismo método 'mostrarInformacion()', 
-            // cada objeto responde de forma diferente según su tipo real.
-            item.mostrarInformacion()
+        // 2. Mostrar diferentes tipos de productos (Polimorfismo)
+        println("\n2. Tipos de productos en inventario:")
+        val inventario = listOf(laptop, mouse, cursoAndroid, ebook)
+        for (prod in inventario) {
+            prod.mostrarInformacion()
         }
 
-        // --- Ejemplo de Carrito de Compras ---
-        println("\n--- Prueba Final: Carrito de Compras ---")
-        val miCarrito = Carrito()
+        // 3. Prueba de Encapsulamiento y Validación
+        println("\n3. Ajustando precios (Encapsulamiento):")
+        mouse.setPrecio(45.0) // Cambio válido
+        ebook.setPrecio(-5.0)  // Cambio inválido (debería mostrar error)
+        println("Precio final del ebook: S/ ${ebook.getPrecio()}")
 
-        // Agregamos productos de ambos tipos al carrito
+        // 4. Gestión del Carrito (Uso integral de POO)
+        println("\n4. Agregando productos al carrito...")
+        val miCarrito = Carrito()
         miCarrito.agregarProducto(laptop)
         miCarrito.agregarProducto(cursoAndroid)
         miCarrito.agregarProducto(mouse)
 
-        // Mostramos el contenido
+        // 5. Contenido final y Total
         miCarrito.mostrarCarrito()
-
-        // Mostramos el total
         val total = miCarrito.calcularTotal()
-        println("Total a pagar: S/ $total")
-        // ------------------------------
+        println("-----------------------------------")
+        println("TOTAL FINAL A PAGAR: S/ $total")
+        println("-----------------------------------")
+
+        println("\n=== FIN DE LA DEMOSTRACIÓN ===")
 
         setContent {
             CarritoDeComprasIATheme {
