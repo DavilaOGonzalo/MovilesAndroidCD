@@ -68,35 +68,7 @@ Para ejecutar este programa desde la terminal, siga los siguientes pasos:
     ```
 
 ## Ejemplo de Ejecución en Consola
-```text
---- SISTEMA DE MATRÍCULA DE ESTUDIANTES ---
-Ingrese el nombre completo del estudiante: Juan Perez
-¿Cuántos cursos desea matricular?: 2
-
-Datos del curso #1:
-Nombre del curso: Matematica
-Cantidad de créditos: 5
-Costo del curso: 1200
-
-Datos del curso #2:
-Nombre del curso: Programacion
-Cantidad de créditos: 10
-Costo del curso: 1500
-
-==========================================
-RESUMEN DE MATRÍCULA
-Estudiante: Juan Perez
-------------------------------------------
-Curso: Matematica | Créditos: 5 | Costo: S/. 1200.0
-Curso: Programacion | Créditos: 10 | Costo: S/. 1500.0
-------------------------------------------
-Total de cursos: 2
-Total de créditos: 15
-Total a pagar: S/. 2700.0
-Carga académica: Carga completa
-Forma de pago: 3 cuotas
-==========================================
-```
+<img width="519" height="500" alt="image" src="https://github.com/user-attachments/assets/9f32a260-767e-4e79-881b-57e91125ddcd" />
 
 ## Conclusión
 A través de este proyecto se logró consolidar el uso de estructuras de datos y lógica de control en Kotlin. El desarrollo incremental asistido por IA permitió comprender cómo escalar una aplicación desde una entrada de datos básica hasta un sistema con lógica de negocio aplicada, manteniendo un código limpio y eficiente.
