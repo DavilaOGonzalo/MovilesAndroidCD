@@ -27,6 +27,10 @@ fun main() {
         costosCursos.add(readln().toDoubleOrNull() ?: 0.0)
     }
 
+    // Variables para los totales
+    var totalCreditos = 0
+    var totalPagar = 0.0
+
     // Mostrar el resumen de la matrícula
     println("\n==========================================")
     println("RESUMEN DE MATRÍCULA")
@@ -35,6 +39,15 @@ fun main() {
     
     for (i in 0 until nombresCursos.size) {
         println("Curso: ${nombresCursos[i]} | Créditos: ${creditosCursos[i]} | Costo: S/. ${costosCursos[i]}")
+        
+        // Operaciones aritméticas para acumular totales
+        totalCreditos += creditosCursos[i]
+        totalPagar += costosCursos[i]
     }
+
+    println("------------------------------------------")
+    println("Total de cursos: ${nombresCursos.size}")
+    println("Total de créditos: $totalCreditos")
+    println("Total a pagar: S/. $totalPagar")
     println("==========================================")
 }
