@@ -1,0 +1,8 @@
+com.gonzalo.carritodecomprasia.app-pngs-0 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\build\generated\res\pngs\debug
+com.gonzalo.carritodecomprasia.app-updated_navigation_xml-1 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\build\generated\updated_navigation_xml\debug
+com.gonzalo.carritodecomprasia.app-packageDebugResources-2 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.gonzalo.carritodecomprasia.app-packageDebugResources-3 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.gonzalo.carritodecomprasia.app-debug-4 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.gonzalo.carritodecomprasia.app-debug-5 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\src\debug\res
+com.gonzalo.carritodecomprasia.app-main-6 C:\Users\Gonzalo\Desktop\MovilesAndroidCD\Semana02\CarritoDeCompras\CodigoIA\app\src\main\res
+gradleHome-0 C:\Users\Gonzalo\.gradle
