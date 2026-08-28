@@ -45,9 +45,27 @@ fun main() {
         totalPagar += costosCursos[i]
     }
 
+    // Determinar la carga académica según el total de créditos
+    val cargaAcademica = if (totalCreditos <= 12) {
+        "M.R"
+    } else if (totalCreditos <= 18) {
+        "Carga completa"
+    } else {
+        "Renuncia automática"
+    }
+
+    // Determinar la forma de pago según el total a pagar
+    val formaPago = if (totalPagar > 2500) {
+        "3 cuotas"
+    } else {
+        "2 cuotas"
+    }
+
     println("------------------------------------------")
     println("Total de cursos: ${nombresCursos.size}")
     println("Total de créditos: $totalCreditos")
     println("Total a pagar: S/. $totalPagar")
+    println("Carga académica: $cargaAcademica")
+    println("Forma de pago: $formaPago")
     println("==========================================")
 }
