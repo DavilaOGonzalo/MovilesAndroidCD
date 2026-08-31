@@ -5,6 +5,8 @@ fun main() {
     println("     SISTEMA DE MATRÍCULA DE ESTUDIANTES")
     println("==========================================")
 
+    // BLOQUE 1: Ingreso de datos
+
     print("Ingrese el nombre del estudiante: ")
     val nombreEstudiante = readln()
 
@@ -27,18 +29,33 @@ fun main() {
         creditosCursos.add(readln().toIntOrNull() ?: 0)
     }
 
+    // BLOQUE 2: Cálculo de créditos y costos
+
+    var totalCreditos = 0
+    var totalPagar = 0.0
+
     println("\n==========================================")
-    println("DATOS INGRESADOS")
+    println("RESUMEN DE MATRÍCULA")
     println("Estudiante: $nombreEstudiante")
-    println("Costo por crédito: S/. $costoPorCredito")
     println("------------------------------------------")
 
     for (i in nombresCursos.indices) {
+
+        val costoCurso = creditosCursos[i] * costoPorCredito
+
         println(
             "Curso: ${nombresCursos[i]} | " +
-                    "Créditos: ${creditosCursos[i]}"
+                    "Créditos: ${creditosCursos[i]} | " +
+                    "Costo: S/. $costoCurso"
         )
+
+        totalCreditos += creditosCursos[i]
+        totalPagar += costoCurso
     }
 
+    println("------------------------------------------")
+    println("Cursos matriculados: ${nombresCursos.size}")
+    println("Total de créditos: $totalCreditos")
+    println("Total a pagar: S/. $totalPagar")
     println("==========================================")
 }
