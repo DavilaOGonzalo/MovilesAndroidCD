@@ -90,10 +90,11 @@ fun main() {
     }
 
     val incremento = totalPagar * porcentajeIncremento
-    val totalConIncremento = totalPagar + incremento
+    val subtotalConIncremento = totalPagar + incremento
+    val igv = subtotalConIncremento * 0.18
 
     val esBecado = categoria == "B"
-    val totalFinal = if (esBecado) 0.0 else totalConIncremento
+    val totalFinal = if (esBecado) 0.0 else (subtotalConIncremento + igv)
     val nombreCategoria = if (esBecado) "Becado" else "Ordinario"
 
     // Resultado final
@@ -105,6 +106,7 @@ fun main() {
     println("Total de créditos: $totalCreditos")
     println("Subtotal a pagar: S/. $totalPagar")
     println("Incremento por turno ($nombreTurno): S/. $incremento")
+    println("IGV (18%): S/. $igv")
     println("Total a pagar: S/. $totalFinal")
     println("Carga académica: $cargaAcademica")
     println("Forma de pago: $formaPago")
