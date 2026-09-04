@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CarritoDeCompras"
 include(":app")
+include(":consola")
