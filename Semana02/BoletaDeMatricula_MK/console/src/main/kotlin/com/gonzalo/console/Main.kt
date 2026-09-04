@@ -13,6 +13,9 @@ fun main() {
     print("Ingrese el costo por crédito: S/. ")
     val costoPorCredito = readln().toDoubleOrNull() ?: 0.0
 
+    print("Ingrese el turno (M: Mañana, T: Tarde, N: Noche): ")
+    val turno = readln().uppercase()
+
     print("¿Cuántos cursos desea matricular?: ")
     val cantidadCursos = readln().toIntOrNull() ?: 0
 
@@ -69,12 +72,32 @@ fun main() {
         "2 cuotas"
     }
 
+    val porcentajeIncremento = when (turno) {
+        "M" -> 0.10
+        "T" -> 0.15
+        "N" -> 0.20
+        else -> 0.0
+    }
+
+    val nombreTurno = when (turno) {
+        "M" -> "Mañana"
+        "T" -> "Tarde"
+        "N" -> "Noche"
+        else -> "No especificado"
+    }
+
+    val incremento = totalPagar * porcentajeIncremento
+    val totalFinal = totalPagar + incremento
+
     // Resultado final
 
     println("------------------------------------------")
+    println("Turno: $nombreTurno")
     println("Cursos matriculados: ${nombresCursos.size}")
     println("Total de créditos: $totalCreditos")
-    println("Total a pagar: S/. $totalPagar")
+    println("Subtotal a pagar: S/. $totalPagar")
+    println("Incremento por turno ($nombreTurno): S/. $incremento")
+    println("Total a pagar: S/. $totalFinal")
     println("Carga académica: $cargaAcademica")
     println("Forma de pago: $formaPago")
     println("==========================================")
