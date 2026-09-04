@@ -7,8 +7,8 @@ package com.gonzalo.carritodecomprasia
 class ProductoFisico(nombre: String, precio: Double) : Producto(nombre, precio) {
 
     override fun mostrarInformacion() {
-        // Accedemos al precio mediante el método público getPrecio() 
+        // Accedemos al precio mediante el metodo publico getPrecio() 
         // debido a que la propiedad 'precio' en la clase base es privada.
-        println("Producto Físico: $nombre - Precio: S/ ${getPrecio()}")
+        println("Producto Fisico: $nombre - Precio: S/ ${getPrecio()}")
     }
 }

@@ -14,12 +14,12 @@ abstract class Producto(val nombre: String, precioInicial: Double) {
         return precio
     }
 
-    // MÉTODO PÚBLICO (Setter): Permite modificar el precio aplicando validación.
+    // METODO PUBLICO (Setter): Permite modificar el precio aplicando validacion.
     fun setPrecio(nuevoPrecio: Double) {
         if (nuevoPrecio >= 0) {
             precio = nuevoPrecio
         } else {
-            println("Error: El precio de '$nombre' no puede ser negativo ($nuevoPrecio).")
+            println("[ERROR] El precio de '$nombre' no puede ser negativo: S/ $nuevoPrecio")
         }
     }
 

@@ -18,7 +18,7 @@ class Carrito {
     fun mostrarCarrito() {
         println("\n--- Resumen del Carrito ---")
         if (productos.isEmpty()) {
-            println("El carrito está vacío.")
+            println("El carrito esta vacio.")
         } else {
             for (p in productos) {
                 p.mostrarInformacion()
