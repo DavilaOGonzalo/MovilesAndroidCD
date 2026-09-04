@@ -16,6 +16,9 @@ fun main() {
     print("Ingrese el turno (M: Mañana, T: Tarde, N: Noche): ")
     val turno = readln().uppercase()
 
+    print("Ingrese la categoría (O: Ordinario, B: Becado): ")
+    val categoria = readln().uppercase()
+
     print("¿Cuántos cursos desea matricular?: ")
     val cantidadCursos = readln().toIntOrNull() ?: 0
 
@@ -87,12 +90,17 @@ fun main() {
     }
 
     val incremento = totalPagar * porcentajeIncremento
-    val totalFinal = totalPagar + incremento
+    val totalConIncremento = totalPagar + incremento
+
+    val esBecado = categoria == "B"
+    val totalFinal = if (esBecado) 0.0 else totalConIncremento
+    val nombreCategoria = if (esBecado) "Becado" else "Ordinario"
 
     // Resultado final
 
     println("------------------------------------------")
     println("Turno: $nombreTurno")
+    println("Categoría: $nombreCategoria")
     println("Cursos matriculados: ${nombresCursos.size}")
     println("Total de créditos: $totalCreditos")
     println("Subtotal a pagar: S/. $totalPagar")
